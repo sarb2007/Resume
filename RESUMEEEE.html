@@ -1,45 +1,182 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1 style="text-align: center;">RESUME</h1>
-    <br>
-    <h2>Personal information</h2>
-    <p>Sarbpreet singh<br>
-    7-b, Model town, Kurukshetra, Haryana<br>
-    <img src="croped face in circle .png" alt="Top Right Image" style="position: absolute; top: 100px; right: 70px; width: 150px; height: auto;">
-    +91 7206277815<br>
-    arbs.preet@gmail.com</p>
-    
-    <h2>Education</h2>
-    <p>
-         Wisdom World School, Kurukshetra (CBSE)<br>
-          	•	Grade XII (2025): 85%<br>
-         	•	Grade XI (2024): 90%<br>
-         	•	Grade X (2023): 88%<br>
-         Core Subjects: PCM + English + Artificial Intelligence<br>
-        IELTS: Overall 6.5 Bands</p>
-    <h2>Technical Skills</h2>
-    <p>    
-	    •	Languages: Python, HTML, CSS<br>
-    	•	Tools: Data Analysis, Web Development, Chatbot Concepts, Video Editing<br>
-    	•	Self-learning: W3Schools, YouTube</p>   
-    <h2>   Projects & Achievements</h2>
-	<p>•	🥈 Python Calculator - 2nd in school coding competition<br>
-	    •	🌐 Chatbot Webinar - Attended international session led by Japan on ML & NLP<br>
-	    •	🏭 Industrial Visits - Meritech & Walkwell (AI, automation, enterprise software)<br>
-	    •	🎬 Short Film - Won 1st prize for 12-min movie (shot, edited, directed by self)</p>
-    <h2>Leadership & Sports</h2>    
-        	•	🏑 National In-line Hockey - Gold (2022), 3× Silver (2021-2019)<br>
-	        •	🏅 Captain - 2× Haryana State Hockey Team<br>
-	     •	🥋 3 months Taekwondo practice
-    <h2>Extracurriculars</h2>     
-    <p>    	•	🎮 2nd in e-sports (Free Fire)<br>
-	•	♻️ 3rd in “Best Out of Waste” (7th standard)</p>
-</body>
+<title>Sarbpreet Singh Resume</title>
 
+<style>
+
+
+
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#22c1c3,#4f46e5);
+    color:#1f2937;
+    margin:0;
+    padding:40px;
+}
+
+/* cards */
+
+.section{
+    background:white;
+    flex:0 0 calc(50% - 10px);
+    padding:20px;
+    box-sizing:border-box;
+    border-radius:12px;
+    transition:all 0.3s ease;
+    box-shadow:0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* hover effect */
+
+.section:hover{
+    transform:translateY(-6px);
+    box-shadow:0 12px 25px rgba(0,0,0,0.25);
+}
+
+h2{
+    border-bottom:2px solid #4f46e5;
+    padding-bottom:5px;
+    margin-bottom:15px;
+    color:#111827;
+}
+
+ 
+
+/* name section */
+
+.header{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.header h1{
+    font-size:40px;
+}
+
+.header p{
+    color:#d1d5db;
+}
+
+/* container */
+
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    max-width:1000px;
+    margin:auto;
+    gap:20px;   /* creates space between sections */
+}
+
+
+ul{
+    padding-left:18px;
+}
+
+li{
+    margin-bottom:6px;
+}
+.header{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:130px;
+margin-bottom:30px;
+}
+
+.header-left h1{
+margin:0;
+font-size:40px;
+}
+
+.header-left p{
+margin-top:5px;
+}
+
+.header-right img{
+width:170px;
+height:170px;
+border-radius:50%;
+object-fit:cover;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+
+
+<div class="header-left">
+    <h1>Sarbpreet Singh</h1>
+    <p>Python | Web Development | Data Analysis</p>
+</div>
+
+<div class="header-right">
+    <img src="croped face in circle .png" alt="My Photo">
+    
+</div>
+
+
+</div>
+
+
+<div class="container">
+
+<div class="section">
+<h2>Personal Information</h2>
+<p>Kurukshetra, Haryana, India</p>
+<p>+91 7206277815</p>
+<p>arbs.preet@gmail.com</p>
+</div>
+
+<div class="section">
+<h2>Education</h2>
+<ul>
+<li>Grade XII (2025) – 85%</li>
+<li>Grade XI (2024) – 90%</li>
+<li>Grade X (2023) – 88%</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Technical Skills</h2>
+<ul>
+<li>Python</li>
+<li>HTML & CSS</li>
+<li>Data Analysis</li>
+<li>Web Development</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Projects & Achievements</h2>
+<ul>
+<li>Python Calculator – 2nd place coding competition</li>
+<li>Chatbot Webinar – International ML session</li>
+<li>Short Film – 1st prize</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Leadership & Sports</h2>
+<ul>
+<li>National In-line Hockey Gold Medal</li>
+<li>Captain – Haryana State Team</li>
+<li>Taekwondo Practice</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Extracurriculars</h2>
+<ul>
+<li>2nd place – Free Fire E-sports</li>
+<li>3rd – Best Out of Waste</li>
+</ul>
+</div>
+
+</div>
+
+</body>
 </html>
