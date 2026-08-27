@@ -1,204 +1,327 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Sarbpreet Singh Resume</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarbpreet Singh Resume</title>
 
-<style>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #22c1c3, #4f46e5);
+            color: #1f2937;
+            margin: 0;
+            padding: 40px 20px;
+        }
 
+        /* Main Header */
+        .header {
+            max-width: 1000px;
+            margin: 0 auto 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 100px;
+        }
 
-body{
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg,#22c1c3,#4f46e5);
-    color:#1f2937;
-    margin:0;
-    padding:40px;
-}
+        .header-left {
+            text-align: left;
+        }
 
-/* cards */
+        .header-left h1 {
+            margin: 0;
+            font-size: 42px;
+            color: white;
+        }
 
-.section{
-    background:white;
-    flex:0 0 calc(50% - 10px);
-    padding:20px;
-    box-sizing:border-box;
-    border-radius:12px;
-    transition:all 0.3s ease;
-    box-shadow:0 6px 18px rgba(0,0,0,0.15);
-}
+        .header-left p {
+            margin-top: 8px;
+            color: #e5e7eb;
+            font-size: 17px;
+        }
 
-/* hover effect */
+        /* Profile Image */
+        .header-right img {
+            width: 165px;
+            height: 165px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+        }
 
-.section:hover{
-    transform:translateY(-6px);
-    box-shadow:0 12px 25px rgba(0,0,0,0.25);
-}
+        /* Cards Container */
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
 
-h2{
-    border-bottom:2px solid #4f46e5;
-    padding-bottom:5px;
-    margin-bottom:15px;
-    color:#111827;
-}
+        /* Individual Cards */
+        .section {
+            background: white;
+            padding: 22px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease;
+        }
 
- 
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+        }
 
-/* name section */
+        /* Section Headings */
+        h2 {
+            margin-top: 0;
+            margin-bottom: 16px;
+            padding-bottom: 7px;
+            border-bottom: 2px solid #4f46e5;
+            color: #111827;
+            font-size: 21px;
+        }
 
-.header{
-    text-align:center;
-    margin-bottom:40px;
-}
+        /* Text */
+        p {
+            line-height: 1.6;
+            margin: 8px 0;
+        }
 
-.header h1{
-    font-size:40px;
-}
+        /* Lists */
+        ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
 
-.header p{
-    color:#d1d5db;
-}
+        li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
 
-/* container */
+        /* Work Experience */
+        .experience {
+            margin-bottom: 20px;
+        }
 
-.container{
-    display:flex;
-    flex-wrap:wrap;
-    max-width:1000px;
-    margin:auto;
-    gap:20px;   /* creates space between sections */
-}
+        .experience:last-child {
+            margin-bottom: 0;
+        }
 
+        .experience-title {
+            font-weight: bold;
+            font-size: 16px;
+            color: #111827;
+        }
 
-ul{
-    padding-left:18px;
-}
+        .experience-date {
+            font-size: 14px;
+            color: #6b7280;
+            margin-top: 3px;
+            margin-bottom: 8px;
+        }
 
-li{
-    margin-bottom:6px;
-}
-.header{
-display:flex;
-justify-content:center;
-align-items:center;
-gap:130px;
-margin-bottom:30px;
-}
+        /* LinkedIn */
+        .linkedin {
+            grid-column: 1 / -1;
+            text-align: center;
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
 
-.header-left h1{
-margin:0;
-font-size:40px;
-}
+        .linkedin a {
+            color: #4f46e5;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-.header-left p{
-margin-top:5px;
-}
+        .linkedin a:hover {
+            text-decoration: underline;
+        }
 
-.header-right img{
-width:170px;
-height:170px;
-border-radius:50%;
-object-fit:cover;
-}
+        /* Mobile Responsive */
+        @media (max-width: 700px) {
 
-</style>
+            body {
+                padding: 25px 15px;
+            }
+
+            .header {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .header-left {
+                text-align: center;
+            }
+
+            .header-left h1 {
+                font-size: 34px;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .linkedin {
+                grid-column: auto;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="header">
+    <!-- HEADER -->
+    <div class="header">
+
+        <div class="header-left">
+            <h1>Sarbpreet Singh</h1>
+            <p>Python | Web Development | Data Analysis</p>
+        </div>
+
+        <div class="header-right">
+            <img src="croped face in circle .png" alt="Sarbpreet Singh">
+        </div>
+
+    </div>
 
 
-<div class="header-left">
-    <h1>Sarbpreet Singh</h1>
-    <p>Python | Web Development | Data Analysis</p>
-</div>
+    <!-- MAIN CONTENT -->
+    <div class="container">
 
-<div class="header-right">
-    <img src="croped face in circle .png" alt="My Photo">
-    
-</div>
+        <!-- PERSONAL INFORMATION -->
+        <div class="section">
+            <h2>Personal Information</h2>
 
-
-</div>
+            <p>📍 Luton, United Kingdom</p>
+            <p>📧 preet18sarb@gmail.com</p>
+        </div>
 
 
-<div class="container">
+        <!-- EDUCATION -->
+        <div class="section">
+            <h2>Education</h2>
 
-<div class="section">
-<h2>Personal Information</h2>
-<p>Kurukshetra, Haryana, India</p>
-<p>preet18sarb@gmail.com</p>
-</div>
+            <ul>
+                <li>Grade XII (2025) – 85%</li>
+                <li>Grade XI (2024) – 90%</li>
+                <li>Grade X (2023) – 88.8%</li>
+            </ul>
+        </div>
 
-<div class="section">
-<h2>Education</h2>
-<ul>
-<li>Grade XII (2025) – 85%</li>
-<li>Grade XI (2024) – 90%</li>
-<li>Grade X (2023) – 88.8%</li>
-</ul>
-</div>
 
-    
-<div class="section">
-<h2>Technical Skills</h2>
-<ul>
-<li>Python</li>
-<li>HTML & CSS</li>
-<li>Data Analysis</li>
-<li>Web Development</li>
-</ul>
-</div>
+        <!-- WORK EXPERIENCE -->
+        <div class="section">
 
-<div class="section">
-<h2>Projects</h2>
-<ul>
-<li>Python Calculator</li>
-<li>loan approval system</li>
-<li>covid-19 Data Analysing system</li>
-<li>Short Film</li>
-</ul>
-</div>
+            <h2>Work Experience</h2>
 
-<div class="section">
-<h2>Leadership & Sports</h2>
-<ul>
-<li>National In-line Hockey Gold Medal</li>
-<li>Captain – Haryana State Team</li>
-<li>Football</li>
-</ul>
-</div>
+            <div class="experience">
 
-<div class="section">
-<h2>Extracurriculars</h2>
-<ul>
-<li>Online Gaming</li>
-<li>Building personal projects and websites</li>
-</ul>
+                <div class="experience-title">
+                    Intern – Constructive Reach
+                </div>
 
-<div class="section">
-<h2>Work Experience</h2>
+                <div class="experience-date">
+                    January 2026 – February 2026
+                </div>
 
-<p><strong>Intern – Constructive Reach</strong><br>
-January 2026 – February 2026</p>
-<ul>
-<li>Gained practical experience working in a professional company environment.</li>
-<li>Assisted with day-to-day tasks and developed communication and teamwork skills.</li>
-<li>Applied problem-solving and digital skills while working on assigned tasks.</li>
-</ul>
+                <ul>
+                    <li>Gained experience working in a professional company environment.</li>
+                    <li>Assisted with day-to-day tasks while developing communication and teamwork skills.</li>
+                    <li>Applied problem-solving and digital skills to assigned tasks.</li>
+                </ul>
 
-<p><strong>Restaurant Team Member – Kathi King</strong><br>
-May 2026 – June 2026</p>
-<ul>
-<li>Worked as part of a busy restaurant team and supported daily operations.</li>
-<li>Handled customer interactions and helped maintain a positive customer experience.</li>
-<li>Developed teamwork, communication, time-management and multitasking skills.</li>
-</ul>
-</div>
+            </div>
 
-</div>
-<div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="sarb2007" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/sarb2007?trk=profile-badge">Sarbpreet Singh</a></div>
-</div>
-    
+
+            <div class="experience">
+
+                <div class="experience-title">
+                    Restaurant Team Member – Kathi King
+                </div>
+
+                <div class="experience-date">
+                    May 2026 – June 2026
+                </div>
+
+                <ul>
+                    <li>Supported daily restaurant operations as part of a busy team.</li>
+                    <li>Interacted with customers and helped provide a positive customer experience.</li>
+                    <li>Developed teamwork, communication, time-management and multitasking skills.</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <!-- TECHNICAL SKILLS -->
+        <div class="section">
+            <h2>Technical Skills</h2>
+
+            <ul>
+                <li>Python</li>
+                <li>HTML & CSS</li>
+                <li>Data Analysis</li>
+                <li>Web Development</li>
+            </ul>
+        </div>
+
+
+        <!-- PROJECTS -->
+        <div class="section">
+            <h2>Projects</h2>
+
+            <ul>
+                <li>Python Calculator</li>
+                <li>Loan Approval System</li>
+                <li>COVID-19 Data Analysis System</li>
+                <li>Short Film</li>
+            </ul>
+        </div>
+
+
+        <!-- LEADERSHIP & SPORTS -->
+        <div class="section">
+            <h2>Leadership & Sports</h2>
+
+            <ul>
+                <li>National In-line Hockey Gold Medal</li>
+                <li>Captain – Haryana State Team</li>
+                <li>Football</li>
+            </ul>
+        </div>
+
+
+        <!-- EXTRACURRICULARS -->
+        <div class="section">
+            <h2>Extracurriculars</h2>
+
+            <ul>
+                <li>Online Gaming</li>
+                <li>Building personal projects and websites</li>
+            </ul>
+        </div>
+
+
+        <!-- LINKEDIN -->
+        <div class="linkedin">
+            <a href="https://in.linkedin.com/in/sarb2007" target="_blank">
+                LinkedIn – Sarbpreet Singh
+            </a>
+        </div>
+
+    </div>
+
 </body>
 </html>
